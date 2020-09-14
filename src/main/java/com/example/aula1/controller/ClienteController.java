@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ClienteController {
 
-    @GetMapping("/cliente")
+    @GetMapping("/clientes")
     public String getClientes(){
         return "Vai retornar um dia do BD todos os cliente!";
     }
 
-    @GetMapping("/cliente/{codigo}")
+    @GetMapping("/clientes/{codigo}")
     public String getCliente(@PathVariable int codigo){
         if(codigo>0)
-            return "Vai retornar um cliente = " + codigo;
+            return "Vai retornar um cliente =    " + codigo;
         else
             return "Erro, Numero negativo";     
     }   
